@@ -1,9 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Bike_Sphere : MonoBehaviour
 {
     private Rigidbody sphereRB;
+
+    public Material player1Mat, player2Mat;
+    public Transform spawn1, spawn2;
+    public MeshRenderer frontWheel, backWheel;
+
+    [NonSerialized]
+    public Transform[] spawnPoints;
+    [NonSerialized]
+    public Transform[] respawnPoints;
     
     public float fwdSpeed;
     public float revSpeed;
@@ -19,14 +29,42 @@ public class Bike_Sphere : MonoBehaviour
     public float modifiedDrag;
     
     public float alignToGroundTime;
+
+    private PlayerInput _playerInput;
     
     void Start()
     {
+        _playerInput = GetComponent<PlayerInput>();
+        // Spawn(_playerInput.playerIndex);
+        // Get Sphere Rigidbody
         sphereRB = GetComponentInChildren<Rigidbody>();
         // Detach Sphere from car
         sphereRB.transform.parent = null;
 
         normalDrag = sphereRB.drag;
+        
+        // Set Player Material
+        if (_playerInput.playerIndex == 0)
+        {
+            frontWheel.material = player1Mat;
+            backWheel.material = player1Mat;
+        }
+        else
+        {
+            frontWheel.material = player2Mat;
+            backWheel.material = player2Mat;
+        }
+        Invoke(nameof(Spawn), 0.1f);
+    }
+
+    private void Spawn()
+    {
+        sphereRB.position = spawnPoints[_playerInput.playerIndex].position;
+    }
+
+    private void Respawn(int respawnPointIndex)
+    {
+        transform.position = respawnPoints[respawnPointIndex].position;
     }
 
     public void OnMove(InputValue inputValue)
