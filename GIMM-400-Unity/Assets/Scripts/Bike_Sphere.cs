@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Bike_Sphere : MonoBehaviour
 {
     private Rigidbody sphereRB;
+    
+    public int lapsCompleted = 0;
 
     public Material player1Mat, player2Mat;
     public Transform spawn1, spawn2;
@@ -31,9 +34,15 @@ public class Bike_Sphere : MonoBehaviour
     public float alignToGroundTime;
 
     private PlayerInput _playerInput;
+    private Transform _mesh;
+    private Text winnerText;
     
     void Start()
     {
+        winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
+        winnerText.text = "";
+        
+        _mesh = transform.GetChild(0);
         _playerInput = GetComponent<PlayerInput>();
         // Spawn(_playerInput.playerIndex);
         // Get Sphere Rigidbody
@@ -76,8 +85,6 @@ public class Bike_Sphere : MonoBehaviour
     void Update()
     {
         // Get Input
-        // moveInput = Input.GetAxisRaw("Vertical");
-        // turnInput = Input.GetAxisRaw("Horizontal");
         moveInput = move.y;
         turnInput = move.x;
         
@@ -99,6 +106,11 @@ public class Bike_Sphere : MonoBehaviour
         Quaternion toRotateTo = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
         transform.rotation = Quaternion.Slerp(transform.rotation, toRotateTo, alignToGroundTime * Time.deltaTime);
         
+        // Tilt the Bike
+        Vector3 tilt = _mesh.rotation.eulerAngles;
+        tilt.x = turnInput * 20f;
+        _mesh.rotation = Quaternion.Euler(tilt);
+        
         // Calculate Movement Direction
         moveInput *= moveInput > 0 ? fwdSpeed : revSpeed;
         
@@ -112,5 +124,19 @@ public class Bike_Sphere : MonoBehaviour
             sphereRB.AddForce(transform.forward * moveInput, ForceMode.Acceleration); // Add Movement
         else
             sphereRB.AddForce(transform.up * -200f); // Add Gravity
+    }
+
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Finish"))
+        {
+            lapsCompleted++;
+        }
+
+        if (lapsCompleted >= 4)
+        {
+            winnerText.text = "Player " + (_playerInput.playerIndex + 1) + " Wins!";
+        }
     }
 }
