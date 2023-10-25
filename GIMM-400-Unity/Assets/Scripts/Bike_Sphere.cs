@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class CarController : MonoBehaviour
+public class Bike_Sphere : MonoBehaviour
 {
-    public Rigidbody sphereRB;
+    private Rigidbody sphereRB;
     
     public float fwdSpeed;
     public float revSpeed;
     public float turnSpeed;
     public LayerMask groundLayer;
 
+    private Vector2 move;
     private float moveInput;
     private float turnInput;
     private bool isCarGrounded;
@@ -20,17 +22,27 @@ public class CarController : MonoBehaviour
     
     void Start()
     {
+        sphereRB = GetComponentInChildren<Rigidbody>();
         // Detach Sphere from car
         sphereRB.transform.parent = null;
 
         normalDrag = sphereRB.drag;
     }
+
+    public void OnMove(InputValue inputValue)
+    {
+        print(inputValue.Get<Vector2>());
+        move = inputValue.Get<Vector2>();
+    }
     
     void Update()
     {
         // Get Input
-        moveInput = Input.GetAxisRaw("Vertical");
-        turnInput = Input.GetAxisRaw("Horizontal");
+        // moveInput = Input.GetAxisRaw("Vertical");
+        // turnInput = Input.GetAxisRaw("Horizontal");
+        moveInput = move.y;
+        turnInput = move.x;
+        
 
         // Calculate Turning Rotation
         float newRot = turnInput * turnSpeed * Time.deltaTime * moveInput;
