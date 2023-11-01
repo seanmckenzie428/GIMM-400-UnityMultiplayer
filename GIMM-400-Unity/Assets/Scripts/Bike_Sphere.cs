@@ -23,6 +23,9 @@ public class Bike_Sphere : MonoBehaviour
     public float turnSpeed;
     public LayerMask groundLayer;
 
+    public GameObject respawnPlane;
+    private GameObject lastRespawnPoint;
+
     private Vector2 move;
     private float moveInput;
     private float turnInput;
@@ -39,6 +42,7 @@ public class Bike_Sphere : MonoBehaviour
     
     void Start()
     {
+        respawnPlane = GameObject.Find("RespawnPlane");
         winnerText = GameObject.Find("WinnerText").GetComponent<Text>();
         winnerText.text = "";
         
@@ -137,6 +141,18 @@ public class Bike_Sphere : MonoBehaviour
         if (lapsCompleted >= 4)
         {
             winnerText.text = "Player " + (_playerInput.playerIndex + 1) + " Wins!";
+        }
+
+        if (other.CompareTag("Respawn") && !other.gameObject.Equals(respawnPlane))
+        {
+            lastRespawnPoint = other.gameObject;
+        }
+        
+        if (other.gameObject.Equals(respawnPlane))
+        {
+            print("respawn");
+            sphereRB.velocity = Vector3.zero;
+            sphereRB.transform.position = lastRespawnPoint.transform.position;
         }
     }
 }
