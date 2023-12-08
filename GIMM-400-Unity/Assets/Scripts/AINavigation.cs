@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class AINavigation : MonoBehaviour
 {
-     public Transform[] waypoints;  // Array of waypoints representing the racing course.
-    public float lapDistanceThreshold = 1.0f;  // Threshold to determine if the AI has completed a lap.
-    public int maxLaps = 3;  // Maximum number of laps to complete.
+     public Transform[] waypoints;
+    public float lapDistanceThreshold = 1.0f;
+    public int maxLaps = 3;
 
     private UnityEngine.AI.NavMeshAgent agent;
     private int currentWaypointIndex = 0;
     private int currentLap = 0;
     private float lapStartTime;
+    private bool aiFinishedRace = false;
 
     void Start()
     {
@@ -21,21 +22,29 @@ public class AINavigation : MonoBehaviour
 
     void Update()
     {
-        if (currentLap < maxLaps)
+        if (!aiFinishedRace)
         {
-            if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < lapDistanceThreshold)
+            if (currentLap < maxLaps)
             {
-                if (currentWaypointIndex < waypoints.Length - 1)
+                if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < lapDistanceThreshold)
                 {
-                    currentWaypointIndex++;
+                    if (currentWaypointIndex < waypoints.Length - 1)
+                    {
+                        currentWaypointIndex++;
+                    }
+                    else
+                    {
+                        StartNewLap();
+                    }
                 }
-                else
-                {
-                    StartNewLap();
-                }
-            }
 
-            NavigateToWaypoint();
+                NavigateToWaypoint();
+            }
+            else if (currentLap >= maxLaps && !aiFinishedRace)
+            {
+                aiFinishedRace = true;
+                HandleRaceFinish(true);
+            }
         }
     }
 
@@ -53,5 +62,27 @@ public class AINavigation : MonoBehaviour
         currentLap++;
         lapStartTime = Time.time;
         Debug.Log("Lap " + currentLap + " started!");
+    }
+
+    void HandleRaceFinish(bool isAI)
+    {
+        if (isAI)
+        {
+            Debug.Log("AI Wins!");
+            // You can add any additional actions for AI victory here.
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Finish"))
+        {
+            // You can add any lap-related logic here.
+        }
+
+        if (other.CompareTag("Respawn"))
+        {
+            // You can add any respawn-related logic here.
+        }
     }
 }
