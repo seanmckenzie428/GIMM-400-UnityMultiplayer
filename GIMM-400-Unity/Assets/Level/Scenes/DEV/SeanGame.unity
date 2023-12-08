@@ -303,6 +303,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0272d5b08108c7543b70c3ccbcd7249c, type: 3}
+--- !u!1 &189048542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 210959487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &189048544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189048542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c125e9c7a349adb40ad2661eb4481027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltAnimationDamping: 5
+  maxTiltAngle: 20
 --- !u!1001 &210959487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -311,6 +330,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Steer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Braking
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.AddedGravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.ReverseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_VisualWheels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: 'm_VisualWheels.Array.data[0]'
+      value: 
+      objectReference: {fileID: 403343182}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: 'm_VisualWheels.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1426638344}
+    - target: {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: AirborneReorientationCoefficient
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4810912518023495568, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Height
       value: 2.64
@@ -326,6 +377,14 @@ PrefabInstance:
     - target: {fileID: 4810912518291869377, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Radius
       value: 0.1372984
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602690, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: maxSteeringAngle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602690, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: steeringAnimationDamping
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Name
@@ -371,14 +430,98 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602693, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Steer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Braking
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: Nozzles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: 'Nozzles.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1373881876}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.AddedGravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.ReverseSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: DriftSparkHorizontalOffset
+      value: -0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4810912519336000188, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Radius
       value: 0.1372984
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 189048544}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnSteer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: KartGame.KartSystems.NewInput, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TiltBike, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2772513696448771213, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 189048544}
   m_SourcePrefab: {fileID: 100100000, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
 --- !u!1 &263827094
 GameObject:
@@ -582,6 +725,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353049682}
   m_CullTransparentMesh: 1
+--- !u!1 &403343182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 981761528641168313, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 210959487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &618395934
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +1064,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3250c15b11377ed4ab6f7c05d488ccfc, type: 3}
+--- !u!4 &1373881876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1547455610796878124, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 210959487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1394791553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -973,6 +1126,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3250c15b11377ed4ab6f7c05d488ccfc, type: 3}
+--- !u!1 &1426638344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2000000789029776471, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 210959487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1426922463 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9031204058248014119, guid: 3250c15b11377ed4ab6f7c05d488ccfc, type: 3}
