@@ -40,6 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6643281549960510367}
+  - component: {fileID: 3773239462186369313}
   m_Layer: 2
   m_Name: KartVisual
   m_TagString: Untagged
@@ -66,6 +67,20 @@ Transform:
   - {fileID: 7798798856362610874}
   m_Father: {fileID: 4810912518991602692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3773239462186369313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643281549960510366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c125e9c7a349adb40ad2661eb4481027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltAnimationDamping: 5
+  maxTiltAngle: 20
 --- !u!1001 &86203259526999711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74,6 +89,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4895846114572768291, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Radius
+      value: 0.1372984
+      objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909958, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: PlayerAnimator
       value: 
@@ -81,6 +100,10 @@ PrefabInstance:
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: DriftGrip
       value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: DriftControl
@@ -100,7 +123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: baseStats.Steer
-      value: 4
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: SuspensionHeight
@@ -112,7 +135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: baseStats.Braking
-      value: 16
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: Nozzles.Array.size
@@ -147,16 +170,24 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: baseStats.AddedGravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: baseStats.CoastingDrag
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: baseStats.ReverseSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: m_VisualWheels.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: DriftSparkHorizontalOffset
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: MinSpeedPercentToFinishDrift
@@ -205,6 +236,10 @@ PrefabInstance:
     - target: {fileID: 4895846115232909977, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: AirborneReorientationCoefficient
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909978, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Mass
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909979, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: m_RootOrder
@@ -259,6 +294,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4895846115232909981, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: maxSteeringAngle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909981, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: steeringAnimationDamping
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115232909981, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: rearLeftWheel.wheelTransform
       value: 
       objectReference: {fileID: 7798798855868438172}
@@ -277,6 +320,22 @@ PrefabInstance:
     - target: {fileID: 4895846115356922113, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115356922127, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Height
+      value: 2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115356922127, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Center.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115356922127, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895846115625279582, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
+      propertyPath: m_Radius
+      value: 0.1372984
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4895846115232909976, guid: cba6236a3ca88a54081cc989c4f0c08a, type: 3}
@@ -350,6 +409,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -6209447553277063189}
         m_TargetAssemblyTypeName: KartGame.KartSystems.NewInput, Assembly-CSharp
+        m_MethodName: OnSteer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3773239462186369313}
+        m_TargetAssemblyTypeName: TiltBike, Assembly-CSharp
         m_MethodName: OnSteer
         m_Mode: 0
         m_Arguments:

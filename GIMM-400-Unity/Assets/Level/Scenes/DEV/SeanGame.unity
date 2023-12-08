@@ -311,22 +311,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4810912518023495568, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
-      propertyPath: m_Height
-      value: 2.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518023495568, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
-      propertyPath: m_Center.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518023495568, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
-      propertyPath: m_Center.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912518291869377, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
-      propertyPath: m_Radius
-      value: 0.1372984
-      objectReference: {fileID: 0}
     - target: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Name
       value: BikePlayerKart
@@ -370,10 +354,6 @@ PrefabInstance:
     - target: {fileID: 4810912518991602692, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810912519336000188, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
-      propertyPath: m_Radius
-      value: 0.1372984
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
