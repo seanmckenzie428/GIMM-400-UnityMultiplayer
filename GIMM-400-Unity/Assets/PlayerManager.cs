@@ -11,8 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
-        playerInput.GetComponent<Bike_Sphere>().spawnPoints = spawnPoints;
-        playerInput.GetComponent<Bike_Sphere>().respawnPoints = respawnPoints;
+        // playerInput.GetComponent<Bike_Sphere>().spawnPoints = spawnPoints;
+        // playerInput.GetComponent<Bike_Sphere>().respawnPoints = respawnPoints;
         print("Hello there");
     }
 }

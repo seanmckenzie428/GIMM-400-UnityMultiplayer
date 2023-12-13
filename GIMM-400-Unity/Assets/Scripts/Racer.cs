@@ -8,13 +8,21 @@ public class Racer : MonoBehaviour
     [NonSerialized]
     public int lapsCompleted;
     private bool hitCheckpoint = false;
-    private Transform lastCheckpoint; 
-    
+    private Transform lastCheckpoint;
+    private Transform t;
     private RaceManager raceManager;
-
-    public void SetSpawn(Transform spawnPoint)
+    
+    public void Start()
     {
-        transform.position = spawnPoint.position;
+        raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
+        t = gameObject.GetComponent<Transform>();
+        Invoke(nameof(SetSpawn), 0.01f);
+    }
+    
+    public void SetSpawn()
+    {
+        var spawnPoint = raceManager.spawnPoints[id - 1];
+        gameObject.GetComponent<Transform>().position = spawnPoint.position;
     }
 
     public void CompleteLap()
