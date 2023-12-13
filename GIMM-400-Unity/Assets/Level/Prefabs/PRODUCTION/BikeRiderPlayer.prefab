@@ -112,7 +112,7 @@ MonoBehaviour:
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0.5
   m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
+  mNoiseOffsets: {x: -316.51077, y: 967.40344, z: -530.6282}
 --- !u!1 &5894927722322486575
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,10 +442,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602693, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Braking
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.TopSpeed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4810912518991602694, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: baseStats.Acceleration
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 635478761861226416}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1351157493837464098}
+    - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -476,3 +504,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98427622b1674514a85560c08b2a8588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  lapsCompleted: 0
+--- !u!1 &1351157493837464098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 5688587064535644604}
+  m_PrefabAsset: {fileID: 0}
