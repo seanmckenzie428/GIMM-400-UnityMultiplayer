@@ -7,11 +7,10 @@ using UnityEngine.InputSystem;
 public class RaceManager : MonoBehaviour
 {
 
-    [SerializeField]
-    private int raceLaps;
-
+    [SerializeField] private int raceLaps;
     [SerializeField] public Transform[] spawnPoints;
     [SerializeField] private LayerMask[] playerLayers;
+    [SerializeField] private Camera defaultSceneCamera;
     
     private bool isStarted = false;
     private bool isRunning = false;
@@ -50,6 +49,10 @@ public class RaceManager : MonoBehaviour
             // racerVCam.Follow = racer.transform;
             // racerVCam.LookAt = racer.transform;
             // racerParent.GetComponentInChildren<Camera>().cullingMask = playerLayers[racers.Count - 1];
+ 
+          if (defaultSceneCamera != null) {
+            defaultSceneCamera.gameObject.SetActive(false);
+          }
         }
     }
     
