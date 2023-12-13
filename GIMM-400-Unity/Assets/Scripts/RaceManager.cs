@@ -14,7 +14,7 @@ public class RaceManager : MonoBehaviour
     private bool isStarted = false;
     private bool isRunning = false;
     private bool isFinished = false;
-    private List<Racer> racers;
+    private List<Racer> racers = new List<Racer>();
 
     private void CheckForWin()
     {
