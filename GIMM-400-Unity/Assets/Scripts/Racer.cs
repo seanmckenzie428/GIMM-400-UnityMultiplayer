@@ -7,7 +7,6 @@ public class Racer : MonoBehaviour
     public int id;
     [NonSerialized]
     public int lapsCompleted;
-    
     private bool hitCheckpoint = false;
     private Transform lastCheckpoint; 
     

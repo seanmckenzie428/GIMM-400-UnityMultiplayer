@@ -528,8 +528,15 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1833841263}
   - {fileID: 1076479316}
-  - {fileID: 0}
-  - {fileID: 0}
+  playerLayers:
+  - serializedVersion: 2
+    m_Bits: 191
+  - serializedVersion: 2
+    m_Bits: 319
+  - serializedVersion: 2
+    m_Bits: 575
+  - serializedVersion: 2
+    m_Bits: 1087
 --- !u!4 &642968598
 Transform:
   m_ObjectHideFlags: 0

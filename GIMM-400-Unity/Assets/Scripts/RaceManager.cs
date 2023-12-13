@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class RaceManager : MonoBehaviour
     private int raceLaps;
 
     [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private LayerMask[] playerLayers;
     
     private bool isStarted = false;
     private bool isRunning = false;
@@ -37,6 +39,16 @@ public class RaceManager : MonoBehaviour
             var id = racers.Count;
             racer.id = id;
             racer.SetSpawn(spawnPoints[id-1]);
+
+            var racerParent = racer.transform.parent.gameObject;
+
+            int layerToAdd = (int)Mathf.Log(playerLayers[racers.Count - 1].value, 2);
+
+            var racerVCam = racerParent.GetComponentInChildren<CinemachineVirtualCamera>();
+            racerVCam.gameObject.layer = layerToAdd;
+            racerVCam.Follow = racer.transform;
+            racerVCam.LookAt = racer.transform;
+            racerParent.GetComponentInChildren<Camera>().cullingMask = playerLayers[racers.Count - 1];
         }
     }
 
