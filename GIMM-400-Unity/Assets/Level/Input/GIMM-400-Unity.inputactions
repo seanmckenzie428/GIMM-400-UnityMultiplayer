@@ -15,15 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Join",
-                    "type": "Button",
-                    "id": "22f95b49-38b4-4937-a8ce-d103d3dfd4fd",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Steer",
                     "type": "Value",
                     "id": "885c2346-4ae3-4925-b01a-92db6a2d6023",
@@ -67,23 +58,12 @@
                 },
                 {
                     "name": "",
-                    "id": "575eb91e-8afb-4340-99b1-8889ae58034f",
-                    "path": "<Gamepad>/start",
+                    "id": "cf3864e5-99ee-4b76-abc4-a38b59d4a92f",
+                    "path": "<Joystick>/trigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Join",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f9a1b574-52d0-4e92-a868-4128848e4dfe",
-                    "path": "<Keyboard>/anyKey",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Join",
+                    "groups": "Joystick",
+                    "action": "Accelerate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -133,6 +113,17 @@
                 },
                 {
                     "name": "",
+                    "id": "c732d4d8-f25b-4d08-97c4-51efe8b270b0",
+                    "path": "<Joystick>/stick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Steer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0c2d1ec9-bcf8-4d84-b574-fd3337a33804",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -149,6 +140,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00337315-9db9-4b0b-86f6-798f891dcc81",
+                    "path": "<Joystick>/{SecondaryTrigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
