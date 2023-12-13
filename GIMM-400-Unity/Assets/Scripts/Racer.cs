@@ -16,13 +16,15 @@ public class Racer : MonoBehaviour
     {
         raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
         t = gameObject.GetComponent<Transform>();
-        Invoke(nameof(SetSpawn), 0.1f);
+        Invoke(nameof(SetSpawn), 0.2f);
     }
     
     public void SetSpawn()
     {
+        t = gameObject.GetComponent<Transform>();
         var spawnPoint = raceManager.spawnPoints[id - 1];
-        gameObject.GetComponent<Transform>().position = spawnPoint.position;
+        t.position = spawnPoint.position;
+        t.rotation = spawnPoint.rotation;
     }
 
     public void CompleteLap()
