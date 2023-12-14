@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
+    - target: {fileID: 403965903110040194, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef4518b1ca5a04befb33432439eee806, type: 3}
     - target: {fileID: 1826104920406643814, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -668,10 +672,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMaterials:
-  - {fileID: 2100000, guid: 9677d93fbf1a44f27810c7864f229b55, type: 2}
-  - {fileID: 2100000, guid: 23b9d6ab9fe4b4cd292fe3dae0b12e99, type: 2}
-  - {fileID: 2100000, guid: 5d4d43f2a479142f0bf3dd31d57458c5, type: 2}
   - {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
+  - {fileID: 2100000, guid: 5d4d43f2a479142f0bf3dd31d57458c5, type: 2}
+  - {fileID: 2100000, guid: 23b9d6ab9fe4b4cd292fe3dae0b12e99, type: 2}
+  - {fileID: 2100000, guid: 9677d93fbf1a44f27810c7864f229b55, type: 2}
   coloredObjects:
   - {fileID: 6138553440690345451}
   - {fileID: 4858822298205575685}
