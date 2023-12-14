@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Racer : MonoBehaviour
 {
+    public Color[] playerColors;
+    public GameObject[] coloredObjects;
     [NonSerialized]
     public int id;
     [NonSerialized]
@@ -14,6 +16,14 @@ public class Racer : MonoBehaviour
 
     public void Start()
     {
+        if (coloredObjects.Length > 0)
+        {
+            foreach (GameObject obj in coloredObjects)
+            {
+                obj.GetComponent<Renderer>().material.color = playerColors[id - 1];
+            }
+        }
+
         raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
         t = gameObject.GetComponent<Transform>();
         Invoke(nameof(SetSpawn), 0.1f);
