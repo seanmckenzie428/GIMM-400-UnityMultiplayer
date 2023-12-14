@@ -174,8 +174,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004335724093941628}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09510426, y: -0.700682, z: 0.095104255, w: 0.7006819}
-  m_LocalPosition: {x: 5.9999995, y: 3, z: 0.00000071525574}
+  m_LocalRotation: {x: 0.08563453, y: 0.72225505, z: -0.092116475, w: 0.6800949}
+  m_LocalPosition: {x: 118.30002, y: -6.0108337, z: -323.59546}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638869834638370141}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09510426, y: -0.700682, z: 0.095104255, w: 0.7006819}
+  m_LocalRotation: {x: 0.09510426, y: -0.70068204, z: 0.095104285, w: 0.7006819}
   m_LocalPosition: {x: 5.9999995, y: 3, z: 0.00000071525574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -402,10 +402,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
+    - target: {fileID: 403965902444250510, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: RunningSoundMaxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 403965902444250510, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: RunningSoundMaxVolume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 403965903110040194, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: ef4518b1ca5a04befb33432439eee806, type: 3}
+    - target: {fileID: 403965903139369922, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58f5e04fd39c825449f127924564fe5b, type: 3}
     - target: {fileID: 1826104920406643814, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
