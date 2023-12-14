@@ -2,9 +2,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace KartGame.KartSystems {
+namespace KartGame.KartSystems
+{
 
-    public class NewInput: BaseInput
+    public class NewInput : BaseInput
     {
         private bool accelerate = false;
         private bool brake = false;
@@ -25,7 +26,8 @@ namespace KartGame.KartSystems {
             steer = context.ReadValue<float>();
         }
 
-        public override InputData GenerateInput() {
+        public override InputData GenerateInput()
+        {
             return new InputData
             {
                 Accelerate = accelerate,
