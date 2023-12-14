@@ -401,11 +401,15 @@ PrefabInstance:
     - target: {fileID: 346423258079921138, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3ea89fbc5688d43bbaf0f8ecf9b8e010, type: 2}
+      objectReference: {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
+    - target: {fileID: 403965903110040194, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef4518b1ca5a04befb33432439eee806, type: 3}
     - target: {fileID: 1826104920406643814, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3ea89fbc5688d43bbaf0f8ecf9b8e010, type: 2}
+      objectReference: {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
     - target: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Name
       value: BikePlayerKart
@@ -466,6 +470,10 @@ PrefabInstance:
       propertyPath: baseStats.Acceleration
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5717865172238624238, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
     - target: {fileID: 7103818050642858700, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -637,6 +645,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1677743411620672685}
+    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1134115775661398521}
   m_SourcePrefab: {fileID: 100100000, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
 --- !u!4 &878800860199394744 stripped
 Transform:
@@ -660,14 +671,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98427622b1674514a85560c08b2a8588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerColors:
-  - {r: 1, g: 0, b: 1, a: 1}
-  - {r: 1, g: 0.78845626, b: 0, a: 1}
-  - {r: 0, g: 0.9717827, b: 1, a: 1}
-  - {r: 0.19339621, g: 1, b: 0.21584332, a: 1}
+  playerMaterials:
+  - {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
+  - {fileID: 2100000, guid: 5d4d43f2a479142f0bf3dd31d57458c5, type: 2}
+  - {fileID: 2100000, guid: 23b9d6ab9fe4b4cd292fe3dae0b12e99, type: 2}
+  - {fileID: 2100000, guid: 9677d93fbf1a44f27810c7864f229b55, type: 2}
   coloredObjects:
   - {fileID: 6138553440690345451}
   - {fileID: 4858822298205575685}
+  - {fileID: 6636737422639917809}
+--- !u!114 &1134115775661398521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878800860199394751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0245277d6864ba89b14e48e980c834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1351157493837464098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
@@ -681,6 +705,11 @@ GameObject:
 --- !u!1 &6138553440690345451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2000000789029776471, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+  m_PrefabInstance: {fileID: 5688587064535644604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6636737422639917809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1363330983528043341, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
   m_PrefabInstance: {fileID: 5688587064535644604}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &7431633807688070743 stripped

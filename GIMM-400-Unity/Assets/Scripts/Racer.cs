@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Racer : MonoBehaviour
 {
-    public Color[] playerColors;
+    public Material[] playerMaterials;
     public GameObject[] coloredObjects;
     [NonSerialized]
     public int id;
@@ -20,13 +20,13 @@ public class Racer : MonoBehaviour
         {
             foreach (GameObject obj in coloredObjects)
             {
-                obj.GetComponent<Renderer>().material.color = playerColors[id - 1];
+                obj.GetComponent<Renderer>().material = playerMaterials[id - 1];
             }
         }
 
         raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
         t = gameObject.GetComponent<Transform>();
-        Invoke(nameof(SetSpawn), 0.1f);
+        Invoke(nameof(SetSpawn), 0.2f);
     }
 
     public void SetSpawn()
