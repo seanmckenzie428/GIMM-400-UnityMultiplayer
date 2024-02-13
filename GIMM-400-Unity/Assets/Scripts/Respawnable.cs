@@ -16,7 +16,9 @@ public class Respawnable : MonoBehaviour
     {
         if (lastRespawnPoint == null)
         {
-            Debug.LogError("No respawn point set for " + gameObject.name);
+            Debug.LogWarning("No respawn point set for " + gameObject.name);
+            var racer = gameObject.GetComponent<Racer>();
+            racer.SetSpawn();
             return;
         }
         transform.position = lastRespawnPoint.position;
