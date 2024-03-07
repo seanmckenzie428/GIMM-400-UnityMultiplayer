@@ -46,11 +46,8 @@ public class Jiggler : MonoBehaviour
         rotationTime += dt * rotationFrequency;
         scaleTime += dt * scaleFrequency;
 
-        if (jigPosition)
-            transform.localPosition = basePosition + positionJigAmount * Mathf.Sin(positionTime) * power;
-        if (jigRotation)
-            transform.localRotation = baseRotation * Quaternion.Euler(rotationJigAmount * Mathf.Sin(rotationTime) * power);
-        if (jigScale)
-            transform.localScale = baseScale + scaleJigAmount * Mathf.Sin(scaleTime) * power;
+        this.transform.localPosition = basePosition + positionJigAmount * Mathf.Sin(positionTime) * power;
+        this.transform.localRotation = baseRotation * Quaternion.Euler(rotationJigAmount * Mathf.Sin(positionTime) * power);
+        this.transform.localScale = baseScale + scaleJigAmount * Mathf.Sin(scaleTime) * power;
     }
 }
