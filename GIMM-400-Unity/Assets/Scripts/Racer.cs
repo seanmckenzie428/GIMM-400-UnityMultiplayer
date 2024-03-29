@@ -23,7 +23,6 @@ public class Racer : MonoBehaviour
                 obj.GetComponent<Renderer>().material = playerMaterials[id - 1];
             }
         }
-
         raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
         t = gameObject.GetComponent<Transform>();
         Invoke(nameof(SetSpawn), 0.2f);
