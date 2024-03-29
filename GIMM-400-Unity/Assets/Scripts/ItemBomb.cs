@@ -7,7 +7,6 @@ public class ItemBomb : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        print(other);
             var damageable = other.GetComponentInParent<IDamageable>();
             damageable?.TakeDamage(10f);
     }
