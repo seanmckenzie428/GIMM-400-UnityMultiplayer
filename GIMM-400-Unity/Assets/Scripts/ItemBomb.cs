@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item_Bomb : MonoBehaviour
+public class ItemBomb : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
+        print(other);
             var damageable = other.GetComponentInParent<IDamageable>();
-            damageable.TakeDamage(10f);
+            damageable?.TakeDamage(10f);
     }
 }

@@ -174,8 +174,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6004335724093941628}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08563453, y: 0.72225505, z: -0.092116475, w: 0.6800949}
-  m_LocalPosition: {x: 118.30002, y: -6.0108337, z: -323.59546}
+  m_LocalRotation: {x: 0.09510426, y: -0.700682, z: 0.095104255, w: 0.7006819}
+  m_LocalPosition: {x: 5.9999995, y: 3, z: 0.00000071525574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8638869834638370141}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09510426, y: -0.70068204, z: 0.095104285, w: 0.7006819}
+  m_LocalRotation: {x: 0.09510426, y: -0.700682, z: 0.095104255, w: 0.7006819}
   m_LocalPosition: {x: 5.9999995, y: 3, z: 0.00000071525574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -660,6 +660,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1134115775661398521}
+    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3653086577751903365}
   m_SourcePrefab: {fileID: 100100000, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
 --- !u!4 &878800860199394744 stripped
 Transform:
@@ -704,6 +707,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0245277d6864ba89b14e48e980c834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3653086577751903365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878800860199394751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5d8e9bec174aa883dddcf9e2a127c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinoutForce: 3000
+  spinoutTorque: 1e+10
 --- !u!1 &1351157493837464098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
