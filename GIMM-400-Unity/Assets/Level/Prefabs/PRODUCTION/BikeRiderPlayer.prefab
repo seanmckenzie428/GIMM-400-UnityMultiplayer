@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f152192026f4e37ae018230b98b970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bomb: {fileID: 3829076784734576504, guid: cd2f41a8888e744448a7ecbe4e5e0678, type: 3}
+  bomb: {fileID: 6969037959044631562, guid: d874f56cd8d084ea191e36bdda9051bb, type: 3}
 --- !u!1 &1351157493837464098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6643281549960510366, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}

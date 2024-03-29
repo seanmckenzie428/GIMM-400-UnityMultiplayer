@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemBomb : MonoBehaviour
+public class ItemSpinPad : MonoBehaviour
 {
 
     private Collider collider;
@@ -32,8 +32,7 @@ public class ItemBomb : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-            var damageable = other.GetComponentInParent<IDamageable>();
-            damageable?.TakeDamage(10f);
-            Invoke(nameof(Despawn), 0.25f);
+        var damageable = other.GetComponentInParent<IDamageable>();
+        damageable?.TakeDamage(10f);
     }
 }
