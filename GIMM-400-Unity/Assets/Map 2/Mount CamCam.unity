@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 172723}
   - component: {fileID: 172722}
   - component: {fileID: 172721}
+  - component: {fileID: 172725}
   m_Layer: 0
   m_Name: SpeedPad (7)
   m_TagString: Untagged
@@ -246,13 +247,35 @@ Transform:
   m_GameObject: {fileID: 172720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: 448.06714, y: -57.73, z: -552.8478}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: 649.40704, y: -54.750336, z: -620.2212}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1092334377}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &172725
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172720}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &51669407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1085,7 @@ GameObject:
   - component: {fileID: 875821378}
   - component: {fileID: 875821377}
   - component: {fileID: 875821376}
+  - component: {fileID: 875821380}
   m_Layer: 0
   m_Name: SpeedPad (2)
   m_TagString: Untagged
@@ -1176,13 +1200,35 @@ Transform:
   m_GameObject: {fileID: 875821375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -184.56, y: -5.72, z: 68.88}
+  m_LocalPosition: {x: 16.779907, y: -2.740337, z: 1.5065536}
   m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 821758031}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &875821380
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875821375}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &880052883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1335,7 @@ GameObject:
   - component: {fileID: 888822090}
   - component: {fileID: 888822089}
   - component: {fileID: 888822088}
+  - component: {fileID: 888822092}
   m_Layer: 0
   m_Name: SpeedPad (4)
   m_TagString: Untagged
@@ -1403,13 +1450,35 @@ Transform:
   m_GameObject: {fileID: 888822087}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: -214.69388, y: -61.71, z: -111.98484}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: -13.353973, y: -58.730335, z: -179.35828}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1846449148}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &888822092
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888822087}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &891825987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1491,7 @@ GameObject:
   - component: {fileID: 891825989}
   - component: {fileID: 891825991}
   - component: {fileID: 891825988}
+  - component: {fileID: 891825992}
   m_Layer: 0
   m_Name: SpeedPad
   m_TagString: Untagged
@@ -1494,12 +1564,12 @@ Transform:
   m_GameObject: {fileID: 891825987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -192.7, y: -5.72, z: 61.2}
+  m_LocalPosition: {x: 8.639908, y: -2.740337, z: -6.173443}
   m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1253765652}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &891825991
 MeshRenderer:
@@ -1543,6 +1613,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &891825992
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891825987}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &946914416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2268,7 +2360,16 @@ Transform:
   m_LocalPosition: {x: -201.3399, y: -2.979663, z: 67.37344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 891825990}
+  - {fileID: 1549942419}
+  - {fileID: 875821379}
+  - {fileID: 1974934111}
+  - {fileID: 888822091}
+  - {fileID: 1622483331}
+  - {fileID: 1874648352}
+  - {fileID: 2074470341}
+  - {fileID: 172724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549942415
@@ -2283,6 +2384,7 @@ GameObject:
   - component: {fileID: 1549942418}
   - component: {fileID: 1549942417}
   - component: {fileID: 1549942416}
+  - component: {fileID: 1549942420}
   m_Layer: 0
   m_Name: SpeedPad (1)
   m_TagString: Untagged
@@ -2397,13 +2499,35 @@ Transform:
   m_GameObject: {fileID: 1549942415}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -200.63, y: -5.72, z: 54.76}
+  m_LocalPosition: {x: 0.7098999, y: -2.740337, z: -12.613445}
   m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 946914417}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1549942420
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549942415}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1560879233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2478,6 +2602,7 @@ GameObject:
   - component: {fileID: 1622483330}
   - component: {fileID: 1622483329}
   - component: {fileID: 1622483328}
+  - component: {fileID: 1622483332}
   m_Layer: 0
   m_Name: SpeedPad (6)
   m_TagString: Untagged
@@ -2592,13 +2717,35 @@ Transform:
   m_GameObject: {fileID: 1622483327}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: 449, y: -57.73, z: -564}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: 650.3399, y: -54.750336, z: -631.3734}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1560879234}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &1622483332
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622483327}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1764915367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,6 +3652,7 @@ GameObject:
   - component: {fileID: 1874648351}
   - component: {fileID: 1874648350}
   - component: {fileID: 1874648349}
+  - component: {fileID: 1874648353}
   m_Layer: 0
   m_Name: SpeedPad (8)
   m_TagString: Untagged
@@ -3619,13 +3767,35 @@ Transform:
   m_GameObject: {fileID: 1874648348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: 449.09384, y: -57.73, z: -574.21515}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: 650.4337, y: -54.750336, z: -641.5886}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1771105861}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &1874648353
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874648348}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1974934107
 GameObject:
   m_ObjectHideFlags: 0
@@ -3638,6 +3808,7 @@ GameObject:
   - component: {fileID: 1974934110}
   - component: {fileID: 1974934109}
   - component: {fileID: 1974934108}
+  - component: {fileID: 1974934112}
   m_Layer: 0
   m_Name: SpeedPad (3)
   m_TagString: Untagged
@@ -3752,13 +3923,35 @@ Transform:
   m_GameObject: {fileID: 1974934107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: -214.6, y: -61.71, z: -122.2}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: -13.260101, y: -58.730335, z: -189.57344}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1100437865}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &1974934112
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974934107}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2074470337
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,6 +3964,7 @@ GameObject:
   - component: {fileID: 2074470340}
   - component: {fileID: 2074470339}
   - component: {fileID: 2074470338}
+  - component: {fileID: 2074470342}
   m_Layer: 0
   m_Name: SpeedPad (5)
   m_TagString: Untagged
@@ -3885,13 +4079,35 @@ Transform:
   m_GameObject: {fileID: 2074470337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.43402192, z: -0, w: 0.9009024}
-  m_LocalPosition: {x: -215.62671, y: -61.71, z: -100.8326}
-  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074647}
+  m_LocalPosition: {x: -14.286804, y: -58.730335, z: -168.20605}
+  m_LocalScale: {x: 1.712852, y: 1.3233198, z: 0.9074646}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 638760152}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1372248112}
   m_LocalEulerAnglesHint: {x: 0, y: -51.446, z: 0}
+--- !u!64 &2074470342
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074470337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2084531103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,15 +4158,6 @@ SceneRoots:
   - {fileID: 1305410425}
   - {fileID: 51669412}
   - {fileID: 622438182}
-  - {fileID: 891825990}
-  - {fileID: 888822091}
-  - {fileID: 1622483331}
-  - {fileID: 1549942419}
-  - {fileID: 1974934111}
-  - {fileID: 1874648352}
-  - {fileID: 875821379}
-  - {fileID: 2074470341}
-  - {fileID: 172724}
   - {fileID: 125422375}
   - {fileID: 430589090}
   - {fileID: 1372248112}
