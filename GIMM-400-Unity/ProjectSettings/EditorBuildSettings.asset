@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Level/Scenes/PRODUCTION/Level1_PROD.unity
+    path: Assets/Scenes/PRODUCTION/Level1_PROD.unity
     guid: 4377481f1d60e4b8ba2d2e7fb76da305
   - enabled: 1
-    path: Assets/Level/Scenes/PRODUCTION/Menu_PROD.unity
+    path: Assets/Scenes/PRODUCTION/Menu_PROD.unity
     guid: 76615b332b3e6479880dfe7bd23ded25
   - enabled: 1
-    path: Assets/Map 2/Mount CamCam.unity
+    path: Assets/Scenes/Mount CamCam.unity
     guid: 3e67f592cb961eb49a9ea85687691901
   - enabled: 1
-    path: Assets/Map 2/Pause_Menu.unity
+    path: Assets/Scenes/Pause_Menu.unity
     guid: b8d2e87a1f88cb04681ad0b9bbf2282f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 790474e83b8c2d848882ca39793858f5, type: 2}

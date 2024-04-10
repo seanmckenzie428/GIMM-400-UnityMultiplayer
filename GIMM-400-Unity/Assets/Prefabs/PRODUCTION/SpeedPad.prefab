@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6213765718984647620}
   - component: {fileID: 27356764103371103}
   m_Layer: 0
-  m_Name: SpeedPad (2)
+  m_Name: SpeedPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
