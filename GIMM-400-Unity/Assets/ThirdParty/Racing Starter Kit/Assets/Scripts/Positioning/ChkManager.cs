@@ -51,7 +51,7 @@ public class ChkManager : MonoBehaviour
         CarPosListGameObjects = FindObjectsOfType(typeof(GameObject)) as GameObject[];
         foreach (GameObject go in CarPosListGameObjects)
         {
-            if (go.name.Contains("CarPos"))
+            if (go.name.Contains("BikeRiderPlayer"))
             {
                 UnsortedCarPosList.Add(go);
             }
