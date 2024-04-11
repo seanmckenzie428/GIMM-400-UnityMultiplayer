@@ -180,7 +180,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8633977190964593772}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.578, y: -42.473, z: 11.339}
 --- !u!20 &635478761861226416
 Camera:
   m_ObjectHideFlags: 0
