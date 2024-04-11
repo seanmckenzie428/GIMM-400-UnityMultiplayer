@@ -106,6 +106,7 @@ public class RaceManager : MonoBehaviour
         foreach (var racer in racers)
         {
             racer.rb.isKinematic = false;
+            racer.EnableTrail();
         }
     }
 
