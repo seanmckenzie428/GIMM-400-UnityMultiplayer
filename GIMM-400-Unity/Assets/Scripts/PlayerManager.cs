@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -6,39 +7,27 @@ using UnityEngine.Serialization;
 
 public class PlayerManager : MonoBehaviour
 {
-    private PlayerCounter playerCounter;
+    [SerializeField] private TextMeshProUGUI playerCountUI;
+    private PlayerInputManager _playerInputManager;
 
-    [SerializeField] private GameObject[] players;
-    
-    private PlayerInputManager playerInputManager;
-    
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
-        playerInputManager = GetComponent<PlayerInputManager>();
-        playerCounter = GameObject.Find("PlayerCounter").GetComponent<PlayerCounter>();
-        // JoinPlayers();
-        // EnablePlayers();
-    }
-    
-    public void OnPlayerJoined (PlayerInput playerInput)
-    {
-        playerCounter.OnPlayerJoined(playerInput);
+        _playerInputManager = GetComponent<PlayerInputManager>();
     }
 
-    // private void JoinPlayers()
-    // {
-    //     for (int i = 0; i < playerCounter.currentPlayerCount; i++)
-    //     {
-    //         playerInputManager.JoinPlayer(-1, -1, null, playerCounter.playerDevices[i]);
-    //     }
-    // }
-
-    private void EnablePlayers()
+    public void OnPlayerJoined(PlayerInput playerInput)
     {
-        for (int i = 0; i < playerCounter.currentPlayerCount; i++)
-        {
-            players[i].SetActive(true);
-        }
+        UpdatePlayerCountUI();
+    }
+
+    public void OnPlayerLeft(PlayerInput playerInput)
+    {
+        UpdatePlayerCountUI();
+    }
+
+    private void UpdatePlayerCountUI()
+    {
+        playerCountUI.text = "Players Joined: " + _playerInputManager.playerCount;
     }
 }

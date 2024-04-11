@@ -1,28 +1,30 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Racer : MonoBehaviour
 {
     public Material[] playerMaterials;
     public GameObject[] coloredObjects;
-    [NonSerialized]
-    public int id;
-    [NonSerialized]
-    public int lapsCompleted;
+    [NonSerialized] public int id;
+    [NonSerialized] public int lapsCompleted;
+    public Rigidbody rb;
+    public RaceManager raceManager;
+    [CanBeNull] public Player player;
+
     private bool hitCheckpoint = false;
     private Transform lastCheckpoint;
     private Transform t;
-    private Rigidbody rb;
-    public RaceManager raceManager;
 
     public void Start()
     {
         t = gameObject.GetComponent<Transform>();
         rb = gameObject.GetComponent<Rigidbody>();
         rb.isKinematic = true;
+        player = GetComponentInParent<Player>();
         // Invoke(nameof(SetSpawn), 0.2f);
     }
-    
+
     public void SetPlayerColor()
     {
         if (coloredObjects.Length > 0)
@@ -39,7 +41,6 @@ public class Racer : MonoBehaviour
         var spawnPoint = raceManager.spawnPoints[id - 1];
         t.position = spawnPoint.position;
         t.rotation = spawnPoint.rotation;
-        rb.isKinematic = false;
     }
 
     public void CompleteLap()
