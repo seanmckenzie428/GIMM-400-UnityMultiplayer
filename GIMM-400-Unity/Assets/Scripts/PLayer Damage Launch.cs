@@ -5,9 +5,9 @@ using KartGame.KartSystems;
 
 public class PLayerDamageLaunch : MonoBehaviour, IDamageable
 {
-       private ArcadeKart arcadeKart;
+     private ArcadeKart arcadeKart;
     public float launchForce = 10f;
-    public string targetAITag = "Robot"; // Tag of the AI object to trigger the launch
+    public string targetObjectTag = "Robot"; // Tag of the object to trigger the launch
 
     private void Start()
     {
@@ -43,8 +43,8 @@ public class PLayerDamageLaunch : MonoBehaviour, IDamageable
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Check if collided with AI object
-        if (collision.collider.CompareTag(targetAITag))
+        // Check if collided with object with specified tag
+        if (collision.collider.CompareTag(targetObjectTag))
         {
             // Trigger the launch behavior
             Launch();
