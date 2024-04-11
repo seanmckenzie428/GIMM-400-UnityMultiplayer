@@ -13,6 +13,7 @@ public class ArcadeKartPowerup : MonoBehaviour {
     public float lastActivatedTimestamp { get; private set; }
 
     public float cooldown = 5f;
+    public float respawnDelay = 3f; // Added field for respawn delay
 
     public bool disableGameObjectWhenActivated;
     public UnityEvent onPowerupActivated;
@@ -23,20 +24,16 @@ public class ArcadeKartPowerup : MonoBehaviour {
         lastActivatedTimestamp = -9999f;
     }
 
-
     private void Update()
     {
         if (isCoolingDown) { 
-
             if (Time.time - lastActivatedTimestamp > cooldown) {
                 //finished cooldown!
                 isCoolingDown = false;
                 onPowerupFinishCooldown.Invoke();
             }
-
         }
     }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,9 +41,7 @@ public class ArcadeKartPowerup : MonoBehaviour {
 
         var rb = other.attachedRigidbody;
         if (rb) {
-
             var kart = rb.GetComponent<ArcadeKart>();
-
             if (kart)
             { 
                 lastActivatedTimestamp = Time.time;
@@ -54,9 +49,21 @@ public class ArcadeKartPowerup : MonoBehaviour {
                 onPowerupActivated.Invoke();
                 isCoolingDown = true;
 
-                if (disableGameObjectWhenActivated) this.gameObject.SetActive(false);
+                if (disableGameObjectWhenActivated) 
+                    this.gameObject.SetActive(false);
+                
+                // Invoke respawn after delay
+                Invoke("RespawnPowerup", respawnDelay);
             }
         }
     }
 
+    // Respawn function to reset powerup status
+    private void RespawnPowerup()
+    {
+        isCoolingDown = false;
+        lastActivatedTimestamp = -9999f;
+        if (disableGameObjectWhenActivated)
+            this.gameObject.SetActive(true);
+    }
 }
