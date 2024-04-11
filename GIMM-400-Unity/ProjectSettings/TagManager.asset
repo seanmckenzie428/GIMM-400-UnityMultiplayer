@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Checkpoint
   - RespawnPoint
+  - SpawnPoint
+  - PlayerManager
+  - StartMenu
   layers:
   - Default
   - TransparentFX

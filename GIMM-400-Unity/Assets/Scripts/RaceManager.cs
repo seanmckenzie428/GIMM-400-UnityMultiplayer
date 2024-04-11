@@ -12,10 +12,16 @@ public class RaceManager : MonoBehaviour
     [SerializeField] private LayerMask[] playerLayers;
     [SerializeField] private Camera defaultSceneCamera;
 
+    private PlayerInputManager playerInputManager;
     private bool isStarted = false;
     private bool isRunning = false;
     private bool isFinished = false;
     private List<Racer> racers = new List<Racer>();
+
+    public void Countdown()
+    {
+        
+    }
 
     public void CheckForWin()
     {
@@ -28,6 +34,17 @@ public class RaceManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        playerInputManager = GameObject.FindWithTag("PlayerManager").GetComponent<PlayerInputManager>();
+        playerInputManager.splitScreen = true;
+        playerInputManager.DisableJoining();
+        foreach (PlayerInput player in PlayerInput.all)
+        {
+            OnPlayerJoined(player);
+        }
+    }
+
 
     public void OnPlayerJoined(PlayerInput playerInput)
     {
@@ -37,6 +54,9 @@ public class RaceManager : MonoBehaviour
             racers.Add(racer);
             var id = racers.Count;
             racer.id = id;
+            racer.raceManager = this;
+            racer.SetPlayerColor();
+            racer.SetSpawn();
             print("Racer: " + id + " joined");
             print(racer.transform);
 

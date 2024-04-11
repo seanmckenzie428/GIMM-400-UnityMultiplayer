@@ -12,9 +12,18 @@ public class Racer : MonoBehaviour
     private bool hitCheckpoint = false;
     private Transform lastCheckpoint;
     private Transform t;
-    private RaceManager raceManager;
+    private Rigidbody rb;
+    public RaceManager raceManager;
 
     public void Start()
+    {
+        t = gameObject.GetComponent<Transform>();
+        rb = gameObject.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
+        // Invoke(nameof(SetSpawn), 0.2f);
+    }
+    
+    public void SetPlayerColor()
     {
         if (coloredObjects.Length > 0)
         {
@@ -23,17 +32,14 @@ public class Racer : MonoBehaviour
                 obj.GetComponent<Renderer>().material = playerMaterials[id - 1];
             }
         }
-        raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
-        t = gameObject.GetComponent<Transform>();
-        Invoke(nameof(SetSpawn), 0.2f);
     }
 
     public void SetSpawn()
     {
-        t = gameObject.GetComponent<Transform>();
         var spawnPoint = raceManager.spawnPoints[id - 1];
         t.position = spawnPoint.position;
         t.rotation = spawnPoint.rotation;
+        rb.isKinematic = false;
     }
 
     public void CompleteLap()
