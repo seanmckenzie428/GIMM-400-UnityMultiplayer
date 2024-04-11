@@ -655,6 +655,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 6499148745189272692}
+    - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1677743411620672685}
     - targetCorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
@@ -677,6 +680,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4810912518991602691, guid: 8259e7c607cf2cc43b7e28bf2715288d, type: 3}
   m_PrefabInstance: {fileID: 5688587064535644604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6499148745189272692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878800860199394751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9912cb565fea3674ebe04a27246129b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchForce: 1000000
+  targetAITag: Robot
 --- !u!114 &1677743411620672685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,8 +739,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5d8e9bec174aa883dddcf9e2a127c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinoutForce: 200
-  spinoutTorque: 9000
+  spinoutForce: 10000
+  spinoutTorque: 90000
 --- !u!114 &23247220585380959
 MonoBehaviour:
   m_ObjectHideFlags: 0
