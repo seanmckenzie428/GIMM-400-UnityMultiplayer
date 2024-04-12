@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: PlayerAnimator
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1359804740481132988, guid: 330b38d3fbf204f9b9fe195eab6e89d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1364927153599573927, guid: 330b38d3fbf204f9b9fe195eab6e89d8, type: 3}
       propertyPath: m_LocalScale.y
       value: 2.84
