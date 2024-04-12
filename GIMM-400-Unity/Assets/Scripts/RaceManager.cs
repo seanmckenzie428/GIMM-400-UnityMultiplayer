@@ -31,6 +31,7 @@ public class RaceManager : MonoBehaviour
         StartCountdown();
     }
     
+    
     public void StartCountdown()
     {
         InvokeRepeating(nameof(Countdown), 0, 1);
@@ -41,6 +42,10 @@ public class RaceManager : MonoBehaviour
         if (countdownValue > 0)
         {
             SetCountdownForPlayers(countdownValue.ToString());
+            foreach (var racer in racers)
+            {
+                racer.SetSpawn();
+            }
         }
         else if (countdownValue == 0)
         {
@@ -95,6 +100,17 @@ public class RaceManager : MonoBehaviour
             {
                 defaultSceneCamera.gameObject.SetActive(false);
             }
+            
+        }
+    }
+
+    public void MovePlayersToSpawnPoints()
+    {
+        foreach (var racer in racers)
+        {
+            print(racer.transform.position);
+            racer.respawnable.Respawn();
+            print(racer.transform.position);
         }
     }
     
