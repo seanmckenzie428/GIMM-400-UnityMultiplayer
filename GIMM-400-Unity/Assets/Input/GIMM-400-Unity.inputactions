@@ -69,6 +69,17 @@
                 },
                 {
                     "name": "",
+                    "id": "bc62ccf5-8424-4a77-a550-8b6156c398e1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6486d695-373e-4986-b582-b96c6f3cffd7",
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
@@ -151,6 +162,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "237edf8b-73ab-4442-b5f4-d2ffb8248033",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Brake",
                     "isComposite": false,
                     "isPartOfComposite": false
