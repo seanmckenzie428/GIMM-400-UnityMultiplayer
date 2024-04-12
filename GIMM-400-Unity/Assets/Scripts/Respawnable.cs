@@ -14,6 +14,8 @@ public class Respawnable : MonoBehaviour
 
     public void Respawn()
     {
+        print("Respawning...");
+        print(lastRespawnPoint);
         if (lastRespawnPoint == null)
         {
             Debug.LogWarning("No respawn point set for " + gameObject.name);

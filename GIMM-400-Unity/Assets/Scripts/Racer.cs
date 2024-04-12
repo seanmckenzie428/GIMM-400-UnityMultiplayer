@@ -16,9 +16,12 @@ public class Racer : MonoBehaviour
     [SerializeField]
     private TrailRenderer trailRenderer;
 
+    public Transform spawnPoint;
+
     private bool hitCheckpoint = false;
     private Transform lastCheckpoint;
     private Transform t;
+    public Respawnable respawnable;
 
     public void Start()
     {
@@ -27,7 +30,13 @@ public class Racer : MonoBehaviour
         rb.isKinematic = true;
         player = GetComponentInParent<Player>();
         trailRenderer.emitting = false;
+        respawnable = gameObject.GetComponent<Respawnable>();
         // Invoke(nameof(SetSpawn), 0.2f);
+    }
+
+    private void Update()
+    {
+        print(t.position);
     }
 
     public void SetPlayerColor()
