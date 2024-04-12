@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/PRODUCTION/Level1_PROD.unity
     guid: 4377481f1d60e4b8ba2d2e7fb76da305
   - enabled: 1
+    path: Assets/Scenes/DEV/Menu_DEV.unity
+    guid: 8195fbf1b23d934409d475fef44a42b1
+  - enabled: 1
+    path: Assets/Scenes/DEV/Mount_CamCam_DEV.unity
+    guid: f47d1bc15fcbe4c3b8b56e89ad2cba22
+  - enabled: 0
     path: Assets/Scenes/PRODUCTION/Menu_PROD.unity
     guid: 16fde986bd5472546869b2bf75d11ed1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PRODUCTION/Mount_CamCam_PROD.unity
-    guid: 1b1f397878478bb449f21f8ca01798df
+    guid: 2cb810a03e75fd2409287cc7f065056d
   - enabled: 0
     path: Assets/Scenes/Pause_Menu.unity
     guid: b8d2e87a1f88cb04681ad0b9bbf2282f
