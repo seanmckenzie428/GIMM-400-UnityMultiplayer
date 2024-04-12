@@ -34,11 +34,6 @@ public class Racer : MonoBehaviour
         // Invoke(nameof(SetSpawn), 0.2f);
     }
 
-    private void Update()
-    {
-        print(t.position);
-    }
-
     public void SetPlayerColor()
     {
         if (coloredObjects.Length > 0)
