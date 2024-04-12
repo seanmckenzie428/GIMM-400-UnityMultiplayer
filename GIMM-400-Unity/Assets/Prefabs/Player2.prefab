@@ -1136,10 +1136,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMaterials:
-  - {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
-  - {fileID: 2100000, guid: 5d4d43f2a479142f0bf3dd31d57458c5, type: 2}
   - {fileID: 2100000, guid: 23b9d6ab9fe4b4cd292fe3dae0b12e99, type: 2}
+  - {fileID: 2100000, guid: 5d4d43f2a479142f0bf3dd31d57458c5, type: 2}
   - {fileID: 2100000, guid: 9677d93fbf1a44f27810c7864f229b55, type: 2}
+  - {fileID: 2100000, guid: 2a7b3643bb2c34403861ca1927455a30, type: 2}
   coloredObjects:
   - {fileID: 6351661338862624984}
   rb: {fileID: 0}
