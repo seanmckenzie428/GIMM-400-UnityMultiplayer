@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using Cinemachine;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class RaceManager : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class RaceManager : MonoBehaviour
     [SerializeField] public Transform[] spawnPoints;
     [SerializeField] private LayerMask[] playerLayers;
     [SerializeField] private Camera defaultSceneCamera;
+    [SerializeField] private GameObject endGameUI;
 
     private PlayerInputManager playerInputManager;
     private bool isStarted = false;
@@ -150,6 +153,8 @@ public class RaceManager : MonoBehaviour
 
     public void WinGame(Racer winner)
     {
+        endGameUI.SetActive(true);
+        endGameUI.GetComponentInChildren<TextMeshProUGUI>().text = $"Player {winner.id} wins!";
         Debug.Log("Player " + winner.id + " won!!!");
     }
 }
