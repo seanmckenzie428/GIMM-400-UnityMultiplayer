@@ -24,7 +24,11 @@ public class Respawnable : MonoBehaviour
             return;
         }
         transform.position = lastRespawnPoint.position;
-        transform.rotation = lastRespawnPoint.rotation;
+
+        var rot = lastRespawnPoint.rotation.eulerAngles;
+        // rotate 90 degrees on y axis
+        rot.y -= 90;
+        transform.rotation = Quaternion.Euler(rot);
         rb.velocity = Vector3.zero;
     }
 
