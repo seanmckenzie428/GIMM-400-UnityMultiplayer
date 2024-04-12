@@ -2592,6 +2592,26 @@ PrefabInstance:
       propertyPath: playerCountUI
       value: 
       objectReference: {fileID: 69031688}
+    - target: {fileID: 2379213450375637911, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
+      propertyPath: playerPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379213450375637911, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
+      propertyPath: 'playerPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5894927722322486575, guid: 330b38d3fbf204f9b9fe195eab6e89d8, type: 3}
+    - target: {fileID: 2379213450375637911, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
+      propertyPath: 'playerPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 5894927722322486575, guid: 107370dcb6c9949339bc2f02bcfebd79, type: 3}
+    - target: {fileID: 2379213450375637911, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
+      propertyPath: 'playerPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2527824674256151842, guid: 38e260038d2f144fe9e47aaebcf10011, type: 3}
+    - target: {fileID: 2379213450375637911, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
+      propertyPath: 'playerPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 7399440885484797913, guid: 80cc653bb928049559d36617f5c69dce, type: 3}
     - target: {fileID: 3214248560312730338, guid: 5fafa44f72bc643d6b783f7342614813, type: 3}
       propertyPath: m_Name
       value: PlayerManager
